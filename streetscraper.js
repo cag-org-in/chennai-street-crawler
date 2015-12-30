@@ -32,7 +32,7 @@ request('http://chennaicorporation.gov.in/sidewalk/frm_cmpentry.jsp', function (
 
       function readNeighborhood(n) {
         if (n >= neighborhoods.length) {
-          console.log('finished area');
+          console.log('finished area ' + a + ' / ' + (areas.length - 1));
           finalAreas.push(area);
           return setTimeout(function() {
             readArea(a + 1);
@@ -54,7 +54,7 @@ request('http://chennaicorporation.gov.in/sidewalk/frm_cmpentry.jsp', function (
 
           function readStreet(s) {
             if (s >= streets.length) {
-              console.log('finished neigbhorhood');
+              console.log('finished neighborhood ' + n + ' / ' + neighborhoods.length);
               area.neighborhoods.push(neighborhood);
               return setTimeout(function() {
                 readNeighborhood(n + 1);
@@ -65,9 +65,7 @@ request('http://chennaicorporation.gov.in/sidewalk/frm_cmpentry.jsp', function (
               name: $(streets[s]).text(),
               id: $(streets[s]).attr('value')
             });
-            setTimeout(function() {
-              readStreet(s + 1);
-            }, 500);
+            readStreet(s + 1);
           }
           setTimeout(function() {
             readStreet(1);

@@ -2,6 +2,16 @@
 
 Basic scraper to output JSON and CSV of Chennai streets
 
-Usage: node streetscraper.js
+Usage:
+
+```bash
+node streetscraper.js
+node json_to_csv.js
+```
+
+Generates:
+
+areas.json
+areas.csv
 
 Open source, MIT license
