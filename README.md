@@ -2,7 +2,15 @@
 
 Basic scraper to output JSON and CSV of Chennai streets
 
-Usage:
+## Download data
+
+Excel: https://github.com/cag-org-in/chennai-street-crawler/blob/master/chennai-streets.xlsx
+
+CSV: https://github.com/cag-org-in/chennai-street-crawler/blob/master/areas.csv
+
+JSON: https://github.com/cag-org-in/chennai-street-crawler/blob/master/areas.json 
+
+## Updating scraper content
 
 ```bash
 node streetscraper.js
@@ -13,5 +21,7 @@ Generates:
 
 areas.json
 areas.csv
+
+Use Excel's Import CSV to generate the Excel file
 
 Open source, MIT license
